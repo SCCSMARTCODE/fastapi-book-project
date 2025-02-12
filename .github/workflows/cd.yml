@@ -1,9 +1,11 @@
 name: Deploy FastAPI to EC2
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
-      - main  # Change to your deployment branch
+      - main
 
 jobs:
   deploy:
